@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a12b2f8d1e80aa4dba1176f4c003ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 1
   cameraWidth: 10
 --- !u!1 &1411267541
 GameObject:

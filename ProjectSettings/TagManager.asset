@@ -47,6 +47,21 @@ TagManager:
   - name: Middleground
     uniqueID: 2334126755
     locked: 0
+  - name: Clothes-Feet
+    uniqueID: 2664712563
+    locked: 0
+  - name: Clothes-Legs
+    uniqueID: 422790009
+    locked: 0
+  - name: Clothes-Body
+    uniqueID: 3849375337
+    locked: 0
+  - name: Clothes-Head
+    uniqueID: 3341030361
+    locked: 0
+  - name: Clothes-Accessories
+    uniqueID: 4081553985
+    locked: 0
   - name: Foreground
     uniqueID: 1204840209
     locked: 0

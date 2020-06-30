@@ -5,7 +5,8 @@ using Utilities;
 
 public class CameraController : SingletonMonoBehaviour<CameraController> {
     
-    public int cameraWidth;
+    [SerializeField]
+    int cameraWidth = 0;
 
     void Start() {
         Miscellaneous.SetCameraOrthographicSizeByWidth(

@@ -13,7 +13,7 @@ public class ItemEditor : Editor {
     }
 
     public override void OnInspectorGUI() {
-        DrawDefaultInspector ();
+        DrawDefaultInspector();
         
         EditorGUILayout.BeginHorizontal();
             if(GUILayout.Button("Save Changes")) {

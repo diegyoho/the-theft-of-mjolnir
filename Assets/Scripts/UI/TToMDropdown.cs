@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class TToM_Dropdown : TMP_Dropdown {
+public class TToMDropdown : TMP_Dropdown {
     RectTransform rt_DropdownList;
     RectTransform rt_DropdownItem;
     protected override GameObject CreateDropdownList(GameObject template) {

@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
 
+[System.Flags]
 public enum ItemType {
-    Head,
-    Body,
-    Legs,
-    Feet,
-    Accessories
+    Head = 1,
+    Body = 2,
+    Legs = 4,
+    Feet = 8,
+    Accessories = 16
 }
 
 [System.Serializable]
@@ -76,8 +77,8 @@ public class GameData : SingletonScriptableObject<GameData> {
     [SerializeField]
     List<AudioClipInfo> audioClipInfos = new List<AudioClipInfo>();
 
-    public static List<ItemData> ItemsOfType(ItemType type) {
-        return instance.items.FindAll(item => item.type == type);
+    public static List<ItemData> ItemsOfType(ItemType type = ~((ItemType) 0)) {
+        return instance.items.FindAll(item => (item.type &= type) != (ItemType) 0);
     }
 
     public static AudioClip GetAudioClip(string name) {

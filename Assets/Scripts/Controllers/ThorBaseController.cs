@@ -28,4 +28,50 @@ public class ThorBaseController :
             break;
         }
     }
+
+    public static void ClearItems() {
+        instance.head.SetCurrentData(null);
+        instance.body.SetCurrentData(null);
+        instance.legs.SetCurrentData(null);
+        instance.feet.SetCurrentData(null);
+        instance.accessories.SetCurrentData(null);
+    }
+
+    public void ClearItemsNonStatic() {
+        ClearItems();
+    }
+
+    public void ScreenShoot() {
+        StartCoroutine(IEScreenShoot());            
+    }
+
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    private static extern void DownloadFile(byte[] array, int byteLength, string fileName);
+
+    IEnumerator IEScreenShoot() {
+        int width = 360;
+        int height = 500;
+        int startX = 740;
+        int startY = 220;
+        var tex = new Texture2D(width, height, TextureFormat.RGB24, false);
+ 
+        Rect rex = new Rect(startX, startY, width, height);
+
+        yield return new WaitForEndOfFrame();
+
+        tex.ReadPixels(rex, 0, 0);
+        tex.Apply();
+ 
+        // Encode texture into PNG
+        var bytes = tex.EncodeToPNG();
+    #if UNITY_EDITOR
+
+        Destroy(tex);
+ 
+        System.IO.File.WriteAllBytes(Application.dataPath + $"{System.DateTime.Now.Ticks}-ORdM.png", bytes);
+    #elif UNITY_WEBGL
+        string customFileName = $"{System.DateTime.Now.Ticks}-ORdM.png";
+        DownloadFile(bytes, bytes.Length, customFileName);
+    #endif
+    }
 }

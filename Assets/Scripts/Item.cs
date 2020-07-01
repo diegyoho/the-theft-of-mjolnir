@@ -19,6 +19,9 @@ public class Item : MonoBehaviour {
         if(currentItemData != null) {
             transform.localPosition = currentItemData.spritePosition;
             spr.sprite = currentItemData.sprite;
+        } else {
+            transform.localPosition = Vector2.zero;
+            spr.sprite = null;
         }
     }
 

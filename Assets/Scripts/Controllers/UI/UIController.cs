@@ -19,12 +19,20 @@ public class UIController : SingletonMonoBehaviour<UIController> {
 
     CanvasGroup currentScreen;
 
-    float timePulse;
+    void Start() {
+        StartCoroutine(
+            IEChangeScreen(chestScreen)
+        );
+    }
 
     public static void ShowClothingScreen() {
         instance.StartCoroutine(
             instance.IEChangeScreen(instance.clothingScreen)
         );
+    }
+
+    public void ShowClothingScreenNonStatic() {
+        ShowClothingScreen();
     }
 
     IEnumerator IEChangeScreen(

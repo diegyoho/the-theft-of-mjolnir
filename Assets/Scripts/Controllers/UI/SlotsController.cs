@@ -26,13 +26,14 @@ public class SlotsController : SingletonMonoBehaviour<SlotsController> {
                 itemSlot = Instantiate(
                     Resources.Load<GameObject>(
                         "Prefabs/UI/item-slot"
-                    ), Vector2.zero,
+                    ), Vector3.zero,
                     Quaternion.identity,
                     content
                 ).GetComponent<ItemSlot>();
 
                 slots.Add(itemSlot);
             }
+            itemSlot.transform.localPosition = Vector3.zero;
             itemSlot.gameObject.SetActive(true);
             itemSlot.SetItemData(itemData);
         }

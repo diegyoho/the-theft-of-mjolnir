@@ -26,7 +26,7 @@ Thor teve seu poderoso martelo roubado pelo gigante de gelo Thryn, e para recupe
 ## 💻 Tecnologias
 
 - C#
-- Unity (version: [2019.3.13f1](https://unity3d.com/pt/get-unity/download/archive?_ga=2.118344778.2126703189.1592841786-2050972297.1592582956))
+- Unity ([LTS 2019.4.1f1](https://unity3d.com/pt/unity/qa/lts-releases?version=2019.4))
 
 ## ⚠️ Instalação
 

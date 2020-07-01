@@ -49,10 +49,10 @@ public class ThorBaseController :
     private static extern void DownloadFile(byte[] array, int byteLength, string fileName);
 
     IEnumerator IEScreenShoot() {
-        int width = 360;
-        int height = 500;
-        int startX = 740;
-        int startY = 220;
+        int width = (int) ((360/1280f) * Screen.width);
+        int height = (int) ((500/720f) * Screen.height);
+        int startX = (int) ((740/1280f) * Screen.width);
+        int startY = (int) ((220/720f) * Screen.height);
         var tex = new Texture2D(width, height, TextureFormat.RGB24, false);
  
         Rect rex = new Rect(startX, startY, width, height);

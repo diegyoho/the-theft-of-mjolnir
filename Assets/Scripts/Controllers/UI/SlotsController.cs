@@ -6,20 +6,20 @@ using Utilities;
 
 public class SlotsController : SingletonMonoBehaviour<SlotsController> {
     public RectTransform content;
+    public Slider slider;
     public List<ItemSlot> slots = new List<ItemSlot>();
 
     void Start() {
         UpdateSlots(GameData.ItemsOfType());
-        GetComponent<ScrollRect>().horizontalNormalizedPosition = 0;
     }
 
     void UpdateSlots(List<ItemData> itemsData) {
         
         slots.ForEach(slot => slot.gameObject.SetActive(false));
-
+        
         foreach(ItemData itemData in itemsData) {
             ItemSlot itemSlot = slots.Find(slot =>
-                slot.currentItemData.name == itemData.name
+                slot.currentItemData.Equals(itemData)
             );
 
             if(!itemSlot) {
@@ -33,8 +33,27 @@ public class SlotsController : SingletonMonoBehaviour<SlotsController> {
 
                 slots.Add(itemSlot);
             }
-
+            itemSlot.gameObject.SetActive(true);
             itemSlot.SetItemData(itemData);
         }
+        Canvas.ForceUpdateCanvases();
+
+        GetComponent<ScrollRect>().horizontalNormalizedPosition = 0;
+
+    }
+
+    public void SetFilter(TToMDropdown dropdown) {
+        
+        int value = 1 << dropdown.value;
+
+        if(dropdown.value == dropdown.options.Count - 1)
+            value = -1;
+
+        ItemType i = (ItemType) value;
+        UpdateSlots(GameData.ItemsOfType(i));
+    }
+
+    public void UpdateSlider(Vector2 normalizedPosition) {
+        slider.value = normalizedPosition.x;
     }
 }

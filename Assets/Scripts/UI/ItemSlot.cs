@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
@@ -14,5 +15,9 @@ public class ItemSlot : MonoBehaviour {
         currentItemData = itemData;
         name.text = currentItemData.name;
         image.sprite = currentItemData.sprite;
+    }
+
+    public void Click() {
+        ThorBaseController.SetItem(currentItemData);
     }
 }

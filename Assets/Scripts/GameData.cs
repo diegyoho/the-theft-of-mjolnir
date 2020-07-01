@@ -78,7 +78,7 @@ public class GameData : SingletonScriptableObject<GameData> {
     List<AudioClipInfo> audioClipInfos = new List<AudioClipInfo>();
 
     public static List<ItemData> ItemsOfType(ItemType type = ~((ItemType) 0)) {
-        return instance.items.FindAll(item => (item.type &= type) != (ItemType) 0);
+        return instance.items.FindAll(item => (item.type & type) != (ItemType) 0);
     }
 
     public static AudioClip GetAudioClip(string name) {

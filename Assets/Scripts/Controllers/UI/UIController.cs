@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : SingletonMonoBehaviour<UIController> {
+    [SerializeField]
+    GameData gameData;
 
     [Header("Screens")]
     [SerializeField]

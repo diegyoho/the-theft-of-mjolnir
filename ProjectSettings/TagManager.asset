@@ -50,11 +50,11 @@ TagManager:
   - name: Clothes-Feet
     uniqueID: 2664712563
     locked: 0
-  - name: Clothes-Legs
-    uniqueID: 422790009
-    locked: 0
   - name: Clothes-Body
     uniqueID: 3849375337
+    locked: 0
+  - name: Clothes-Legs
+    uniqueID: 422790009
     locked: 0
   - name: Clothes-Head
     uniqueID: 3341030361

@@ -411,15 +411,15 @@ MonoBehaviour:
   m_Value: 5
   m_Options:
     m_Options:
-    - m_Text: "Acess\xF3rios"
-      m_Image: {fileID: 0}
     - m_Text: "Cabe\xE7a"
+      m_Image: {fileID: 0}
+    - m_Text: Camisas / Vestidos
       m_Image: {fileID: 0}
     - m_Text: "Cal\xE7as / Saias"
       m_Image: {fileID: 0}
     - m_Text: "Cal\xE7ados"
       m_Image: {fileID: 0}
-    - m_Text: Camisas / Vestidos
+    - m_Text: "Acess\xF3rios"
       m_Image: {fileID: 0}
     - m_Text: Todos os Itens
       m_Image: {fileID: 0}

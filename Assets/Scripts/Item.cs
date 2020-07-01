@@ -5,6 +5,7 @@ using Utilities;
 
 public class Item : MonoBehaviour {
     
+    public int sortingOrder;
     public ItemData currentItemData;
 
     [HideInInspector]
@@ -19,9 +20,12 @@ public class Item : MonoBehaviour {
         if(currentItemData != null) {
             transform.localPosition = currentItemData.spritePosition;
             spr.sprite = currentItemData.sprite;
+            spr.sortingOrder = sortingOrder +
+                                    currentItemData.sortingOrder; 
         } else {
             transform.localPosition = Vector2.zero;
             spr.sprite = null;
+            spr.sortingOrder = sortingOrder; 
         }
     }
 
@@ -48,7 +52,8 @@ public class Item : MonoBehaviour {
             spr.sprite.name,
             currentItemData.type,
             spr.sprite,
-            transform.localPosition
+            transform.localPosition,
+            spr.sortingOrder
         );
 
         currentItemData = GameData.SetItemData(currentChange);

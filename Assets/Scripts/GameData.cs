@@ -19,18 +19,21 @@ public class ItemData : IEquatable<ItemData> {
     public ItemType type;
     public Sprite sprite;
     public Vector2 spritePosition;
+    public int sortingOrder;
 
     public ItemData(
         string name,
         ItemType type,
         Sprite sprite,
-        Vector2 spritePosition
+        Vector2 spritePosition,
+        int sortingOrder
     ) {
         SetItemData(
             name,
             type,
             sprite,
-            spritePosition
+            spritePosition,
+            sortingOrder
         );
     }
 
@@ -38,12 +41,14 @@ public class ItemData : IEquatable<ItemData> {
         string name,
         ItemType type,
         Sprite sprite,
-        Vector2 spritePosition
+        Vector2 spritePosition,
+        int sortingOrder
     ) {
         this.name = name;
         this.type = type;
         this.sprite = sprite;
         this.spritePosition = spritePosition;
+        this.sortingOrder = sortingOrder;
     }
 
     public void SetItemData(ItemData other) {
@@ -51,7 +56,8 @@ public class ItemData : IEquatable<ItemData> {
             other.name,
             other.type,
             other.sprite,
-            other.spritePosition
+            other.spritePosition,
+            other.sortingOrder
         );
     }
 

@@ -52,8 +52,7 @@ public class Item : MonoBehaviour {
             spr.sprite.name,
             currentItemData.type,
             spr.sprite,
-            transform.localPosition,
-            spr.sortingOrder
+            transform.localPosition
         );
 
         currentItemData = GameData.SetItemData(currentChange);

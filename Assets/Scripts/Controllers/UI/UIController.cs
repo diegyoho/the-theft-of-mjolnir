@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIController : SingletonMonoBehaviour<UIController> {
+    
     [SerializeField]
     GameData gameData;
 
@@ -16,6 +17,10 @@ public class UIController : SingletonMonoBehaviour<UIController> {
     CanvasGroup clothingScreen;
 
     [Header("Clothing Screen")]
+    [SerializeField]
+    Slider charmBar;
+    [SerializeField]
+    Slider funcionalityBar;
 
     CanvasGroup currentScreen;
 
@@ -35,9 +40,17 @@ public class UIController : SingletonMonoBehaviour<UIController> {
         ShowClothingScreen();
     }
 
+    public static void UpdateAttributes(
+        float charm, float funcionality
+    ) {
+        instance.charmBar.value = charm;
+        instance.funcionalityBar.value = funcionality;
+    }
+
     IEnumerator IEChangeScreen(
         CanvasGroup screen,
-        System.Action executeBefore = null, System.Action executeAfter = null
+        System.Action executeBefore = null,
+        System.Action executeAfter = null
     ) {
         if(executeBefore != null)
             executeBefore();

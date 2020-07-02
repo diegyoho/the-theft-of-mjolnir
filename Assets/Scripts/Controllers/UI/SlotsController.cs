@@ -10,6 +10,10 @@ public class SlotsController : SingletonMonoBehaviour<SlotsController> {
     public List<ItemSlot> slots = new List<ItemSlot>();
 
     void Start() {
+        GameData.ItemsOfType().ForEach(item => {
+            item.charmPoints = Random.Range(-9, 10);
+            item.funcionalityPoints = Random.Range(-9, 10);
+        });
         UpdateSlots(GameData.ItemsOfType());
     }
 

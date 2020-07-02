@@ -18,299 +18,419 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 253b8e64cffff3a4f81b654e514384b7, type: 3}
     spritePosition: {x: 0.173, y: 15.818}
     sortingOrder: 0
+    charmPoints: 2
+    funcionalityPoints: 5
   - name: Capacete Antichamas
     type: 1
     sprite: {fileID: 21300000, guid: eff62c36823f0b645891ce95fba15368, type: 3}
     spritePosition: {x: -0.01, y: 13.54}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: -9
+    funcionalityPoints: -3
   - name: Capacete de Chifres
     type: 1
     sprite: {fileID: 21300000, guid: 024b871e2547b0a4cac701d279264c04, type: 3}
     spritePosition: {x: 0.122, y: 15.798}
     sortingOrder: 0
+    charmPoints: 4
+    funcionalityPoints: 6
   - name: "Chap\xE9u Copos"
     type: 1
     sprite: {fileID: 21300000, guid: 9e003d4d02873044794336f5a43d1840, type: 3}
     spritePosition: {x: 0.08, y: 15.57}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 0
+    funcionalityPoints: 7
   - name: "Chap\xE9u Guarda-Chuva"
     type: 1
     sprite: {fileID: 21300000, guid: 75c154f7847bac44abb28d34e3f39d50, type: 3}
     spritePosition: {x: 0.135, y: 16.854}
     sortingOrder: 0
+    charmPoints: -3
+    funcionalityPoints: 6
   - name: "Chap\xE9u"
     type: 1
     sprite: {fileID: 21300000, guid: 96379194cc8052845a4a03bf42c8d2c7, type: 3}
     spritePosition: {x: 0.275, y: 16.758}
     sortingOrder: 0
+    charmPoints: 8
+    funcionalityPoints: -4
   - name: Coroa de Flores
     type: 1
     sprite: {fileID: 21300000, guid: 6254db17d66ebfe419401c236676ac6b, type: 3}
     spritePosition: {x: 0.078, y: 16.452}
     sortingOrder: 0
+    charmPoints: -4
+    funcionalityPoints: 0
   - name: Gorro
     type: 1
     sprite: {fileID: 21300000, guid: 395b7dec32258944b9577d312112fbbb, type: 3}
     spritePosition: {x: 0.128, y: 16.644}
     sortingOrder: 0
+    charmPoints: 8
+    funcionalityPoints: -4
   - name: "Len\xE7o"
     type: 1
     sprite: {fileID: 21300000, guid: ba412967b8d6e4b4988337c22e3b3707, type: 3}
     spritePosition: {x: 0.48, y: 13.756}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 4
+    funcionalityPoints: 9
   - name: Penteado Elegante
     type: 1
     sprite: {fileID: 21300000, guid: 0ac241e2507f25243b18029fc9dfebf8, type: 3}
     spritePosition: {x: 0.097, y: 17.155}
     sortingOrder: 0
+    charmPoints: -7
+    funcionalityPoints: -4
   - name: "V\xE9u Noiva"
     type: 1
     sprite: {fileID: 21300000, guid: 81991e27eaa225e4da49f53afedcb49f, type: 3}
     spritePosition: {x: 0.04, y: 13.74}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 6
+    funcionalityPoints: 2
   - name: Bikini
     type: 2
     sprite: {fileID: 21300000, guid: 838cc86c8b6e9b84ab6412703173235a, type: 3}
     spritePosition: {x: 0.063, y: 9.348}
     sortingOrder: -2
+    charmPoints: -6
+    funcionalityPoints: -6
   - name: Blusa AntiChamas
     type: 2
     sprite: {fileID: 21300000, guid: 146ce5769e9f04148bac61d4a8f9b830, type: 3}
     spritePosition: {x: -0.397, y: 9.847}
     sortingOrder: 0
+    charmPoints: 4
+    funcionalityPoints: 2
   - name: Blusa Simples
     type: 2
     sprite: {fileID: 21300000, guid: b14b08bca0dde664ca141fee0e60dca8, type: 3}
     spritePosition: {x: -0.005, y: 9.859}
     sortingOrder: -2
+    charmPoints: 2
+    funcionalityPoints: 1
   - name: Body Cinza
     type: 2
     sprite: {fileID: 21300000, guid: 7440d91ed2a1f074f89cd21f68302644, type: 3}
     spritePosition: {x: -0.246, y: 9.685}
     sortingOrder: -2
+    charmPoints: -9
+    funcionalityPoints: 9
   - name: "Body Vers\xE1til"
     type: 2
     sprite: {fileID: 21300000, guid: dd3744be7659db7408886cf8526d8fdb, type: 3}
     spritePosition: {x: 0.019, y: 9.499}
     sortingOrder: -2
+    charmPoints: 5
+    funcionalityPoints: 4
   - name: Corcelet
     type: 2
     sprite: {fileID: 21300000, guid: 1f38af4d3f8ac9f43ab3437372d9c856, type: 3}
     spritePosition: {x: -0.059, y: 7.607}
     sortingOrder: 0
+    charmPoints: -5
+    funcionalityPoints: 6
   - name: "Mai\xF4"
     type: 2
     sprite: {fileID: 21300000, guid: 7be59dd713de754419fd878b8ce36159, type: 3}
     spritePosition: {x: 0.04, y: 8.25}
     sortingOrder: -2
+    charmPoints: 0
+    funcionalityPoints: 3
   - name: Manto de Pele
     type: 2
     sprite: {fileID: 21300000, guid: 69a7a99091c9a2149b96a1ce76d28a57, type: 3}
     spritePosition: {x: -0.203, y: 9.26}
     sortingOrder: -2
+    charmPoints: -9
+    funcionalityPoints: 7
   - name: Marca de Camisa
     type: 2
     sprite: {fileID: 21300000, guid: 8ef22a211ca74234cace080694d8aac9, type: 3}
     spritePosition: {x: -0.319, y: 9.899}
     sortingOrder: -2
+    charmPoints: -1
+    funcionalityPoints: 0
   - name: "Roupa de Bal\xE3o"
     type: 2
     sprite: {fileID: 21300000, guid: d963dfa7acc962e4081a75ffe984824f, type: 3}
     spritePosition: {x: -0.12, y: 7.737}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 8
+    funcionalityPoints: 5
   - name: Vestido Casamento
     type: 2
     sprite: {fileID: 21300000, guid: 409044c4dbf69d84cb17f0c89dca74d8, type: 3}
     spritePosition: {x: -0.37, y: 6.52}
     sortingOrder: 0
+    charmPoints: 5
+    funcionalityPoints: 8
   - name: "Vestido G\xF3tico"
     type: 2
     sprite: {fileID: 21300000, guid: 1adfbba389f4e6347995c70780c8214a, type: 3}
     spritePosition: {x: -0.37, y: 6.52}
     sortingOrder: 0
+    charmPoints: 2
+    funcionalityPoints: -6
   - name: "Vestido Helen\xEDstico"
     type: 2
     sprite: {fileID: 21300000, guid: 8457855fcad88214781182b98e4ce771, type: 3}
     spritePosition: {x: -0.09, y: 6.33}
     sortingOrder: 0
+    charmPoints: -7
+    funcionalityPoints: -8
   - name: Vestido Longo
     type: 2
     sprite: {fileID: 21300000, guid: fece90bdd1ce36d49b2395e28f84bc8e, type: 3}
     spritePosition: {x: -0.198, y: 6.148}
     sortingOrder: 0
+    charmPoints: -3
+    funcionalityPoints: -5
   - name: "B\xF3iaSleipinir"
     type: 4
     sprite: {fileID: 21300000, guid: 75d2e500e22dcfd44a22f6394c04867a, type: 3}
     spritePosition: {x: 0.484, y: 6.749}
     sortingOrder: 2
+    charmPoints: -9
+    funcionalityPoints: 9
   - name: "Cal\xE7a AntiChamas"
     type: 4
     sprite: {fileID: 21300000, guid: 4a6e903dae173f7489bfbf24ea704282, type: 3}
     spritePosition: {x: 0.01, y: 4.04}
     sortingOrder: 0
+    charmPoints: 6
+    funcionalityPoints: 0
   - name: "Cal\xE7a de Malha"
     type: 4
     sprite: {fileID: 21300000, guid: d41cfc37188662148a860f90911ead82, type: 3}
     spritePosition: {x: 0.01, y: 4.04}
     sortingOrder: -2
+    charmPoints: -6
+    funcionalityPoints: 8
   - name: "Cal\xE7a Moleton"
     type: 4
     sprite: {fileID: 21300000, guid: bae9073c1f3af37499340ae78d88a4bb, type: 3}
     spritePosition: {x: 0.01, y: 4.39}
-    sortingOrder: 0
+    sortingOrder: -2
+    charmPoints: -1
+    funcionalityPoints: 5
   - name: Canga
     type: 4
     sprite: {fileID: 21300000, guid: a384e5d55d407a545803d36a4c330b5e, type: 3}
     spritePosition: {x: -0.75, y: 4.96}
     sortingOrder: 0
+    charmPoints: -6
+    funcionalityPoints: -8
   - name: Legging
     type: 4
     sprite: {fileID: 21300000, guid: 9516890585bd3714eb1dd7031b895d94, type: 3}
     spritePosition: {x: 0.02, y: 4.22}
-    sortingOrder: 0
+    sortingOrder: -2
+    charmPoints: 9
+    funcionalityPoints: 4
   - name: Saia de Babado
     type: 4
     sprite: {fileID: 21300000, guid: ec0a81cb3f7fb9849adbd2da16d02027, type: 3}
     spritePosition: {x: -0.1, y: 4.85}
     sortingOrder: 0
+    charmPoints: -1
+    funcionalityPoints: -5
   - name: Saia de Praia
     type: 4
     sprite: {fileID: 21300000, guid: ed0586c8b1b338448b764b759b9614e1, type: 3}
     spritePosition: {x: -0.03, y: 6.027}
     sortingOrder: 0
+    charmPoints: -7
+    funcionalityPoints: -6
   - name: Saia Longa
     type: 4
     sprite: {fileID: 21300000, guid: f8faf7100841c0c4e960948347976207, type: 3}
     spritePosition: {x: -0.13, y: 3.56}
     sortingOrder: 0
+    charmPoints: 3
+    funcionalityPoints: -5
   - name: Botas de Escalada
     type: 8
     sprite: {fileID: 21300000, guid: 876cee8a018334d43897d18f7ad6d01d, type: 3}
     spritePosition: {x: 0.002, y: 1.326}
     sortingOrder: 0
+    charmPoints: 1
+    funcionalityPoints: 8
   - name: Botas de Frio
     type: 8
     sprite: {fileID: 21300000, guid: d9032e08e1f134e4b84739cc8e6c2a09, type: 3}
     spritePosition: {x: 0.002, y: 1.003}
     sortingOrder: 0
+    charmPoints: -4
+    funcionalityPoints: -4
   - name: Botas de Raquete
     type: 8
     sprite: {fileID: 21300000, guid: ef164a722591b284ebe80f9794a7aba8, type: 3}
     spritePosition: {x: 0.002, y: 1.206}
     sortingOrder: 0
+    charmPoints: -9
+    funcionalityPoints: 3
   - name: Galoxas
     type: 8
     sprite: {fileID: 21300000, guid: 34f0fb73708e8ea4eb1a646ba197e12b, type: 3}
     spritePosition: {x: 0.025, y: 1.274}
     sortingOrder: 0
+    charmPoints: 4
+    funcionalityPoints: 5
   - name: Pantufas
     type: 8
     sprite: {fileID: 21300000, guid: 0fbff322eaa4fec448cfe016d70ccdad, type: 3}
     spritePosition: {x: -0.005, y: 0.61}
     sortingOrder: 0
+    charmPoints: 3
+    funcionalityPoints: 5
   - name: "P\xE9s de Pato"
     type: 8
     sprite: {fileID: 21300000, guid: ee401b3009c18cf4c936fee69390fd1c, type: 3}
     spritePosition: {x: 0.031, y: 0.492}
     sortingOrder: 0
+    charmPoints: 7
+    funcionalityPoints: 9
   - name: "Sand\xE1lias"
     type: 8
     sprite: {fileID: 21300000, guid: f0c5e939d1675e846ae1d020fe51ca8d, type: 3}
     spritePosition: {x: 0.031, y: 0.365}
     sortingOrder: 0
+    charmPoints: 4
+    funcionalityPoints: 9
   - name: Sapatilha Elegante
     type: 8
     sprite: {fileID: 21300000, guid: b3a05e816a650bd4bb62bcacfb23c8cd, type: 3}
     spritePosition: {x: -0.009, y: 0.668}
     sortingOrder: 0
+    charmPoints: 2
+    funcionalityPoints: -3
   - name: Sapatinho de Gelo
     type: 8
     sprite: {fileID: 21300000, guid: 09bcc3def8d289b4cb66db506172c673, type: 3}
     spritePosition: {x: -0.001, y: 0.397}
     sortingOrder: 0
+    charmPoints: 6
+    funcionalityPoints: 7
   - name: "Sapato Cl\xE1ssico"
     type: 8
     sprite: {fileID: 21300000, guid: a49edfd9f614d9c4990087e180c7689d, type: 3}
     spritePosition: {x: -0.009, y: 2.685}
-    sortingOrder: 0
+    sortingOrder: -4
+    charmPoints: 4
+    funcionalityPoints: -7
   - name: Sapato Vermelho
     type: 8
     sprite: {fileID: 21300000, guid: c4fbc2959327d9644a2ad774fa927107, type: 3}
     spritePosition: {x: -0.009, y: 2.5}
-    sortingOrder: 0
+    sortingOrder: -4
+    charmPoints: 8
+    funcionalityPoints: -2
   - name: Brinco de Gelo
     type: 16
     sprite: {fileID: 21300000, guid: f463965a38727f6478449bbd19f01c5b, type: 3}
     spritePosition: {x: 0.14, y: 13.76}
     sortingOrder: 0
+    charmPoints: 3
+    funcionalityPoints: -5
   - name: Buque
     type: 16
     sprite: {fileID: 21300000, guid: dc49df7e068b0744abf5c82846466598, type: 3}
     spritePosition: {x: -2.94, y: 5.53}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: -6
+    funcionalityPoints: 7
   - name: "B\xF3ia"
     type: 16
     sprite: {fileID: 21300000, guid: d9688e0c48f6a374abdbb9c3e6229460, type: 3}
     spritePosition: {x: -0.14, y: 10.14}
-    sortingOrder: 0
+    sortingOrder: -2
+    charmPoints: -2
+    funcionalityPoints: 3
   - name: Escafandro
     type: 16
     sprite: {fileID: 21300000, guid: 4a3b86d81c730dc45bdbd478ea509050, type: 3}
     spritePosition: {x: 0.01, y: 14.92}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 0
+    funcionalityPoints: -1
   - name: Grinalda
     type: 16
     sprite: {fileID: 21300000, guid: 0343b64151c9f7b478c4b09d3708f3ce, type: 3}
     spritePosition: {x: 0.08, y: 9.22}
-    sortingOrder: 0
+    sortingOrder: 2
+    charmPoints: 9
+    funcionalityPoints: 9
   - name: Marca de Protetor
     type: 16
     sprite: {fileID: 21300000, guid: d20d6c98bc487184cb0838be93a2d54b, type: 3}
     spritePosition: {x: 0.163, y: 14.432}
     sortingOrder: 0
+    charmPoints: -7
+    funcionalityPoints: -6
   - name: "M\xE1scara"
     type: 16
     sprite: {fileID: 21300000, guid: 2551dbf60546d3445ba675ca2ca9ad5c, type: 3}
     spritePosition: {x: 0.109, y: 15.48}
     sortingOrder: 0
+    charmPoints: -2
+    funcionalityPoints: 4
   - name: "M\xE1scara da Peste"
     type: 16
     sprite: {fileID: 21300000, guid: 4bf5c8517a6104b41abe504d2a5afe78, type: 3}
     spritePosition: {x: 0.08, y: 15.18}
     sortingOrder: 0
+    charmPoints: -7
+    funcionalityPoints: 4
   - name: Snorkel
     type: 16
     sprite: {fileID: 21300000, guid: 30f01bf3a9d05c743b7fc366e366ca42, type: 3}
     spritePosition: {x: 0.428, y: 15.55}
     sortingOrder: 0
+    charmPoints: -8
+    funcionalityPoints: 3
   - name: "V\xE9u Vi\xFAva"
     type: 16
     sprite: {fileID: 21300000, guid: 03c9fa6bd5a8bfe4ea5a8a127d195596, type: 3}
     spritePosition: {x: -0.05, y: 12.62}
     sortingOrder: 0
+    charmPoints: 1
+    funcionalityPoints: 3
   - name: "V\xE9u"
     type: 16
     sprite: {fileID: 21300000, guid: b572fa62d4b99cd4e86b8b863313ab1b, type: 3}
     spritePosition: {x: 0.061, y: 13.868}
     sortingOrder: 0
+    charmPoints: -8
+    funcionalityPoints: -1
   - name: "\xD3culos de Prote\xE7\xE3o"
     type: 16
     sprite: {fileID: 21300000, guid: 6883c2c534578f942bc7266c691481cf, type: 3}
     spritePosition: {x: 0.14, y: 15.27}
     sortingOrder: 0
+    charmPoints: -6
+    funcionalityPoints: -6
   - name: "\xD3culos Dua Lipa"
     type: 16
     sprite: {fileID: 21300000, guid: 1eabbbbb2114af44bb4e099c0e9c14dd, type: 3}
     spritePosition: {x: 0.113, y: 15.288}
     sortingOrder: 0
+    charmPoints: -5
+    funcionalityPoints: -2
   - name: "\xD3culos e Nariz"
     type: 16
     sprite: {fileID: 21300000, guid: 27688dee943ead048a4a8bad671e656e, type: 3}
     spritePosition: {x: 0.1, y: 14.73}
     sortingOrder: 0
+    charmPoints: 1
+    funcionalityPoints: 4
   - name: "\xD3culos"
     type: 16
     sprite: {fileID: 21300000, guid: 2ac614aabedf35c4cbce23c5166f901c, type: 3}
     spritePosition: {x: 0.1, y: 15.194}
     sortingOrder: 0
+    charmPoints: -3
+    funcionalityPoints: 4
   audioClipInfos: []

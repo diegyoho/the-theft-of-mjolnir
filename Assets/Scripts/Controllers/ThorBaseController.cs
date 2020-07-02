@@ -9,6 +9,30 @@ public class ThorBaseController :
     [SerializeField]
     Item head, body, legs, feet, accessories;
 
+    public static int charmPoints {
+        get {
+            return (
+                instance.head.currentItemData.charmPoints +
+                instance.body.currentItemData.charmPoints +
+                instance.legs.currentItemData.charmPoints +
+                instance.feet.currentItemData.charmPoints +
+                instance.accessories.currentItemData.charmPoints
+            );
+        }
+    }
+
+    public static int funcionalityPoints {
+        get {
+            return (
+                instance.head.currentItemData.funcionalityPoints +
+                instance.body.currentItemData.funcionalityPoints +
+                instance.legs.currentItemData.funcionalityPoints +
+                instance.feet.currentItemData.funcionalityPoints +
+                instance.accessories.currentItemData.funcionalityPoints
+            );
+        }
+    }
+
     public static void SetItem(ItemData itemData) {
         switch(itemData.type) {
             case ItemType.Head:
@@ -27,6 +51,8 @@ public class ThorBaseController :
                 instance.accessories.SetCurrentData(itemData);
             break;
         }
+
+        UIController.UpdateAttributes(charmPoints, funcionalityPoints);
     }
 
     public static void ClearItems() {
@@ -35,6 +61,7 @@ public class ThorBaseController :
         instance.legs.SetCurrentData(null);
         instance.feet.SetCurrentData(null);
         instance.accessories.SetCurrentData(null);
+        UIController.UpdateAttributes(0, 0);
     }
 
     public void ClearItemsNonStatic() {

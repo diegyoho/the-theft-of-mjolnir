@@ -8,6 +8,8 @@ using TMPro;
 public class ItemSlot : MonoBehaviour {
     
     public new TextMeshProUGUI name;
+    public new TextMeshProUGUI charm;
+    public new TextMeshProUGUI funcionality;
     public Image image;
     public ItemData currentItemData;
 
@@ -15,6 +17,12 @@ public class ItemSlot : MonoBehaviour {
         currentItemData = itemData;
         name.text = currentItemData.name;
         image.sprite = currentItemData.sprite;
+        
+        charm.text =
+            $"{ currentItemData.charmPoints.ToString("+0;-#") }";
+
+        funcionality.text =
+            $"{ currentItemData.funcionalityPoints.ToString("+0;-#") }";
     }
 
     public void Click() {

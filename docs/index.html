@@ -6,10 +6,19 @@
     <title>Unity WebGL Player | O Roubo do Mjolnir</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      UnityLoader.instantiate("unityContainer", "Build/docs.json");
+      function clickToLoad() {
+          UnityLoader.instantiate("unityContainer", "Build/docs.json");
+          document.querySelector('#load').remove();
+          window.removeEventListener('click', clickToLoad);
+      }
+
+      window.addEventListener('click', clickToLoad);
     </script>
   </head>
   <body>
     <div id="unityContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <div id="load" style="position: absolute; top: 0; font-size: 32px;">
+      Click to Load!
+    </div>
   </body>
 </html>

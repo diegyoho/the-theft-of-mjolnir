@@ -4,7 +4,7 @@ using UnityEngine;
 using Utilities;
 
 public class Item : MonoBehaviour {
-    
+    public ItemType type;
     public int sortingOrder;
     public ItemData currentItemData;
 
@@ -50,7 +50,7 @@ public class Item : MonoBehaviour {
 
         ItemData currentChange = new ItemData(
             spr.sprite.name,
-            currentItemData.type,
+            type,
             spr.sprite,
             transform.localPosition
         );

@@ -7,60 +7,45 @@ public class ThorBaseController :
     SingletonMonoBehaviour<ThorBaseController> {
     
     [SerializeField]
-    Item head, body, legs, feet, accessories;
+    List<Item> parts = new List<Item>();
 
     public static int charmPoints {
         get {
-            return (
-                instance.head.currentItemData.charmPoints +
-                instance.body.currentItemData.charmPoints +
-                instance.legs.currentItemData.charmPoints +
-                instance.feet.currentItemData.charmPoints +
-                instance.accessories.currentItemData.charmPoints
-            );
+            int total = 0;
+            
+            instance.parts.ForEach(item => {
+                if(item.currentItemData != null)
+                    total += item.currentItemData.charmPoints;
+            });
+
+            return total;
         }
     }
 
     public static int funcionalityPoints {
         get {
-            return (
-                instance.head.currentItemData.funcionalityPoints +
-                instance.body.currentItemData.funcionalityPoints +
-                instance.legs.currentItemData.funcionalityPoints +
-                instance.feet.currentItemData.funcionalityPoints +
-                instance.accessories.currentItemData.funcionalityPoints
-            );
+            int total = 0;
+            
+            instance.parts.ForEach(item => {
+                if(item.currentItemData != null)
+                    total += item.currentItemData.funcionalityPoints;
+            });
+
+            return total;
         }
     }
 
     public static void SetItem(ItemData itemData) {
-        switch(itemData.type) {
-            case ItemType.Head:
-                instance.head.SetCurrentData(itemData);
-            break;
-            case ItemType.Body:
-                instance.body.SetCurrentData(itemData);
-            break;
-            case ItemType.Legs:
-                instance.legs.SetCurrentData(itemData);
-            break;
-            case ItemType.Feet:
-                instance.feet.SetCurrentData(itemData);
-            break;
-            case ItemType.Accessories:
-                instance.accessories.SetCurrentData(itemData);
-            break;
-        }
+        instance.parts.Find(item => item.type == itemData.type)
+            .SetCurrentData(itemData);
 
         UIController.UpdateAttributes(charmPoints, funcionalityPoints);
     }
 
     public static void ClearItems() {
-        instance.head.SetCurrentData(null);
-        instance.body.SetCurrentData(null);
-        instance.legs.SetCurrentData(null);
-        instance.feet.SetCurrentData(null);
-        instance.accessories.SetCurrentData(null);
+        foreach(Item item in instance.parts)
+            item.SetCurrentData(null);
+
         UIController.UpdateAttributes(0, 0);
     }
 

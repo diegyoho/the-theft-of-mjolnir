@@ -8,8 +8,8 @@ using TMPro;
 public class ItemSlot : MonoBehaviour {
     
     public new TextMeshProUGUI name;
-    public new TextMeshProUGUI charm;
-    public new TextMeshProUGUI funcionality;
+    public TextMeshProUGUI charm;
+    public TextMeshProUGUI funcionality;
     public Image image;
     public ItemData currentItemData;
 

@@ -31,7 +31,6 @@ public class LoadingController :
         
         uiController.UpdateLoadingBar(0);
         
-        yield return new WaitForSeconds(.5f);
         yield return StartCoroutine(uiController.Show());
 
         AsyncOperation loadingScene = SceneManager.LoadSceneAsync(sceneIndex);

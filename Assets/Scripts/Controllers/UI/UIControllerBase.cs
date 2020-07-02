@@ -14,6 +14,18 @@ public abstract class UIControllerBase<T> :
 
     protected CanvasGroup currentScreen;
 
+    public void HideScreen(CanvasGroup screen) {
+        StartCoroutine(
+            IEHideScreen(screen)
+        );
+    }
+
+    public void ShowScreen(CanvasGroup screen) {
+        StartCoroutine(
+            IEShowScreen(screen)
+        );
+    }
+
     protected IEnumerator IEHideScreen(CanvasGroup screen) {
         if(screen) {
             while(screen.alpha > 0) {
@@ -37,8 +49,6 @@ public abstract class UIControllerBase<T> :
             }
         
             screen.alpha = 1;
-
-            currentScreen = screen;
         }
     }
 
@@ -60,6 +70,8 @@ public abstract class UIControllerBase<T> :
         yield return StartCoroutine(
             IEShowScreen(screen)
         );
+
+        currentScreen = screen;
 
         if(executeAfter != null)
             executeAfter();

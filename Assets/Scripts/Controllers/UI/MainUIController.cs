@@ -21,6 +21,8 @@ public class MainUIController :
         instance.StartCoroutine(
             instance.IEShowScreen(instance.uiScreen)
         );
+        
+        instance.currentScreen = instance.uiScreen;
     }
     
 }

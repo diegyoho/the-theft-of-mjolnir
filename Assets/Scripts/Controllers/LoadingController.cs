@@ -17,20 +17,21 @@ public class LoadingController :
         uiController = GetComponent<LoadingUIController>();
     }
 
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.Space))
-            LoadScene(1);
-    }
-
     public static void LoadScene(int sceneIndex) {
         instance.StartCoroutine(
             instance.IELoadScene(sceneIndex)
         );
     }
 
+    public void LoadSceneNoStatic(int sceneIndex) {
+        LoadScene(sceneIndex);
+    }
+
     IEnumerator IELoadScene(int sceneIndex) {
         
         uiController.UpdateLoadingBar(0);
+        
+        yield return new WaitForSeconds(.5f);
         yield return StartCoroutine(uiController.Show());
 
         AsyncOperation loadingScene = SceneManager.LoadSceneAsync(sceneIndex);

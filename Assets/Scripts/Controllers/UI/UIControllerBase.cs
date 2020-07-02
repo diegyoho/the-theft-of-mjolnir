@@ -37,6 +37,8 @@ public abstract class UIControllerBase<T> :
             }
         
             screen.alpha = 1;
+
+            currentScreen = screen;
         }
     }
 
@@ -55,11 +57,8 @@ public abstract class UIControllerBase<T> :
             IEHideScreen(currentScreen)
         );
 
-        currentScreen = screen;
-        currentScreen.gameObject.SetActive(true);
-
         yield return StartCoroutine(
-            IEShowScreen(currentScreen)
+            IEShowScreen(screen)
         );
 
         if(executeAfter != null)

@@ -5,7 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : SingletonMonoBehaviour<UIController> {
+public class DressUpUIController :
+    UIControllerBase<DressUpUIController> {
     
     [SerializeField]
     GameData gameData;
@@ -21,9 +22,7 @@ public class UIController : SingletonMonoBehaviour<UIController> {
     Slider charmBar;
     [SerializeField]
     Slider funcionalityBar;
-
-    CanvasGroup currentScreen;
-
+    
     void Start() {
         StartCoroutine(
             IEChangeScreen(chestScreen)
@@ -45,36 +44,5 @@ public class UIController : SingletonMonoBehaviour<UIController> {
     ) {
         instance.charmBar.value = charm;
         instance.funcionalityBar.value = funcionality;
-    }
-
-    IEnumerator IEChangeScreen(
-        CanvasGroup screen,
-        System.Action executeBefore = null,
-        System.Action executeAfter = null
-    ) {
-        if(executeBefore != null)
-            executeBefore();
-
-        screen.alpha = 0;
-        screen.gameObject.SetActive(false);
-
-        if(currentScreen) {
-            while(currentScreen.alpha > 0) {
-                currentScreen.alpha -= Time.deltaTime * 2;
-                yield return null;
-            }
-            currentScreen.gameObject.SetActive(false);
-        }
-
-        currentScreen = screen;
-        currentScreen.gameObject.SetActive(true);
-
-        while(currentScreen.alpha < 1) {
-            currentScreen.alpha += Time.deltaTime * 2;
-            yield return null;
-        }
-
-        if(executeAfter != null)
-            executeAfter();
     }
 }

@@ -39,14 +39,14 @@ public class ThorBaseController :
         instance.parts.Find(item => item.type == itemData.type)
             .SetCurrentData(itemData);
 
-        UIController.UpdateAttributes(charmPoints, funcionalityPoints);
+        DressUpUIController.UpdateAttributes(charmPoints, funcionalityPoints);
     }
 
     public static void ClearItems() {
         foreach(Item item in instance.parts)
             item.SetCurrentData(null);
 
-        UIController.UpdateAttributes(0, 0);
+        DressUpUIController.UpdateAttributes(0, 0);
     }
 
     public void ClearItemsNonStatic() {

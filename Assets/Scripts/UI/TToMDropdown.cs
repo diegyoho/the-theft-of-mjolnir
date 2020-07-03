@@ -22,8 +22,14 @@ public class TToMDropdown : TMP_Dropdown {
         rt_DropdownList.sizeDelta = new Vector2(
                 0, rt_DropdownItem.sizeDelta.y * (options.Count + 1)
             );
-
+        
+        captionText.GetComponent<Canvas>().overrideSorting = true;
         captionText.GetComponent<Canvas>().sortingOrder =
             rt_DropdownList.GetComponent<Canvas>().sortingOrder;
+    }
+
+    protected override void DestroyDropdownList(GameObject dropdownList) {
+        base.DestroyDropdownList(dropdownList);
+        captionText.GetComponent<Canvas>().overrideSorting = false;
     }
 }

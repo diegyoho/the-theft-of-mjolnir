@@ -62,24 +62,24 @@ public class ThorBaseController :
 
     IEnumerator IEScreenShoot() {
         int width = (int) ((360/1280f) * Screen.width);
-        int height = (int) ((500/720f) * Screen.height);
+        int height = (int) ((480/720f) * Screen.height);
         int startX = (int) ((740/1280f) * Screen.width);
-        int startY = (int) ((220/720f) * Screen.height);
+        int startY = (int) ((240/720f) * Screen.height);
         var tex = new Texture2D(width, height, TextureFormat.RGB24, false);
- 
-        Rect rex = new Rect(startX, startY, width, height);
 
+        Rect rex = new Rect(startX, startY, width, height);
+        DressUpUIController.Warning(false);
         yield return new WaitForEndOfFrame();
 
         tex.ReadPixels(rex, 0, 0);
         tex.Apply();
- 
-        // Encode texture into PNG
+        DressUpUIController.Warning();
+
         var bytes = tex.EncodeToPNG();
     #if UNITY_EDITOR
 
         Destroy(tex);
- 
+
         System.IO.File.WriteAllBytes(Application.dataPath + $"{System.DateTime.Now.Ticks}-ORdM.png", bytes);
     #elif UNITY_WEBGL
         string customFileName = $"{System.DateTime.Now.Ticks}-ORdM.png";

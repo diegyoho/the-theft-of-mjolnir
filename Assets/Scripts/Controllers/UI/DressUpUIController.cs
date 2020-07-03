@@ -16,6 +16,8 @@ public class DressUpUIController :
     CanvasGroup chestScreen;
     [SerializeField]
     CanvasGroup clothingScreen;
+    [SerializeField]
+    CanvasGroup warningPopup;
 
     [Header("Clothing Screen")]
     [SerializeField]
@@ -44,5 +46,9 @@ public class DressUpUIController :
     ) {
         instance.charmBar.value = charm;
         instance.funcionalityBar.value = funcionality;
+    }
+
+    public static void Warning(bool show = true) {
+        instance.warningPopup.gameObject.SetActive(show);
     }
 }

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class IntroVideoController : MonoBehaviour{
+public class IntroVideoController : MonoBehaviour {
     public GameObject skipButton;
     VideoPlayer videoPlayer;
+    
     void Start() {
         videoPlayer = GetComponent<VideoPlayer>();
         
@@ -26,7 +27,7 @@ public class IntroVideoController : MonoBehaviour{
 
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
 
         skipButton.SetActive(true);
     }

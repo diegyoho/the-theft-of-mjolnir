@@ -12,9 +12,9 @@ public class MainUIController :
     CanvasGroup uiScreen;
 
     void Start() {
-        StartCoroutine(
-            IEShowScreen(bgIntroScreen)
-        );
+        // StartCoroutine(
+        //     IEShowScreen(bgIntroScreen)
+        // );
     }
 
     public static void ShowUI() {

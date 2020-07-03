@@ -24,5 +24,8 @@ public class MainUIController :
         
         instance.currentScreen = instance.uiScreen;
     }
-    
+
+    public void Play() {
+        LoadingController.LoadScene(2);
+    }
 }

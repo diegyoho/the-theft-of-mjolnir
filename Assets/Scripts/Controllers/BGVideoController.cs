@@ -9,20 +9,21 @@ public class BGVideoController : MonoBehaviour {
     VideoPlayer videoPlayer;
     
     void Start() {
-        videoPlayer =  new GameObject("Video Player 1").AddComponent<VideoPlayer>();
+        videoPlayer =  new GameObject("BG Video Player").AddComponent<VideoPlayer>();
         videoPlayer.playOnAwake = false;
         videoPlayer.renderMode = VideoRenderMode.CameraFarPlane;
         videoPlayer.targetCamera = Camera.main;
         videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
         videoPlayer.SetTargetAudioSource(0, GetComponent<AudioSource>());
         videoPlayer.waitForFirstFrame = false;
-        videoPlayer.loopPointReached += EndReached;
+
         StartCoroutine(PlayVideo());
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Space))
-            EndReached(videoPlayer);
+        long t = (long) (videoPlayer.frameRate * 6f);
+        if(videoPlayer.frame >= t)
+            Jump(videoPlayer);
     }
 
     IEnumerator PlayVideo() {
@@ -42,13 +43,9 @@ public class BGVideoController : MonoBehaviour {
         MainUIController.ShowUI();
     }
 
-    void EndReached(VideoPlayer videoPlayer) {
-        videoPlayer.started += Jump;
-        videoPlayer.Play();
-    }
-
     void Jump(VideoPlayer videoPlayer) {
-        videoPlayer.time = 2.531f;
-        videoPlayer.started -= Jump;
+        videoPlayer.Pause();
+        videoPlayer.frame = (long) (videoPlayer.frameRate * 2.531f);
+        videoPlayer.Play();
     }
 }

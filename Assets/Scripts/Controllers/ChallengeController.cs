@@ -5,9 +5,9 @@ using Utilities;
 
 public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
 
-    public int currentDate = 0;
-    public int targetCharm;
-    public int targetFuncionality;
+    public static int currentDate = 0;
+    public static int targetCharm;
+    public static int targetFuncionality;
     int _totalScore;
     public static int totalScore {
         get { return instance._totalScore; }
@@ -20,13 +20,13 @@ public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
         get {
             int charm = (int) Miscellaneous.Map(
                 ThorBaseController.charmPoints,
-                0, instance.targetCharm,
+                0, targetCharm,
                 1, 5
             );
 
             int funcionality = (int) Miscellaneous.Map(
                 ThorBaseController.funcionalityPoints,
-                0, instance.targetFuncionality,
+                0, targetFuncionality,
                 1, 5
             );
 
@@ -53,7 +53,7 @@ public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
     public static void GoToDate() {
         instance.items = ThorBaseController.GetItems();
 
-        instance.currentDate++;
+        currentDate++;
 
         instance.StartCoroutine(instance.IEGoToDate());
     }
@@ -89,5 +89,12 @@ public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
         yield return new WaitUntil(() => !LoadingController.isLoading);
         
         SetupChallenge();
+    }
+
+    public static void ResetChallenge() {
+        currentDate = 0;
+        targetCharm = 0;
+        targetFuncionality = 0;
+        Destroy(instance.gameObject);
     }
 }

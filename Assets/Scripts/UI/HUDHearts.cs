@@ -16,7 +16,10 @@ public class HUDHearts : MonoBehaviour {
             EndUIController.UpdateDateScore(ChallengeController.dateScore);
             ChallengeController.totalScore += ChallengeController.dateScore;
             text.SetActive(true);
-            ChallengeController.GoToRoom();
+            if(ChallengeController.currentDate < 5)
+                ChallengeController.GoToRoom();
+            else
+                EndUIController.ShowEndScreen();
         }
     }
 }

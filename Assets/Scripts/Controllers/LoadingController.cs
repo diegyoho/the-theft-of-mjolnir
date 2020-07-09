@@ -10,6 +10,8 @@ public class LoadingController :
 
     LoadingUIController uiController;
     
+    public static bool isLoading = false;
+
     public override void Awake() {
         base.Awake();
         DontDestroyOnLoad(gameObject);
@@ -29,9 +31,11 @@ public class LoadingController :
 
     IEnumerator IELoadScene(int sceneIndex) {
         
-        uiController.UpdateLoadingBar(0);
+        isLoading = true;
         
+        uiController.UpdateLoadingBar(0);
         yield return StartCoroutine(uiController.Show());
+        
 
         AsyncOperation loadingScene = SceneManager.LoadSceneAsync(sceneIndex);
 
@@ -44,8 +48,11 @@ public class LoadingController :
         }
 
         GetComponent<Canvas>().worldCamera = Camera.main;
+        
+        isLoading = false;
 
         yield return new WaitForSeconds(.5f);
         yield return StartCoroutine(uiController.Hide());
+
     }
 }

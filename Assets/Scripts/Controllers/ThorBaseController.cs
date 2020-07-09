@@ -35,9 +35,21 @@ public class ThorBaseController :
         }
     }
 
+    public static List<ItemData> GetItems() {
+        List<ItemData> items = new List<ItemData>();
+        instance.parts.ForEach(part => items.Add(part.currentItemData));
+        
+        return items;
+    }
+
+    public static void SetItems(List<ItemData> items) {
+        items.ForEach(item => SetItem(item));
+    }
+
     public static void SetItem(ItemData itemData) {
-        instance.parts.Find(item => item.type == itemData.type)
-            .SetCurrentData(itemData);
+        Item item = instance.parts.Find(part => part.type == itemData.type);
+        
+        if(item) item.SetCurrentData(itemData);
 
         DressUpUIController.UpdateAttributes(charmPoints, funcionalityPoints);
     }
@@ -55,6 +67,21 @@ public class ThorBaseController :
 
     public void ScreenShoot() {
         StartCoroutine(IEScreenShoot());            
+    }
+
+    public static void EnableVisibility(bool show = true) {
+        if(show) {
+            instance.GetComponent<SpriteRenderer>().color = Color.white;
+            
+            foreach (var part in instance.GetComponentsInChildren<SpriteRenderer>()) {
+                part.color = Color.white;
+            }
+        } else {
+            instance.GetComponent<SpriteRenderer>().color = Color.black;
+            foreach (var part in instance.GetComponentsInChildren<SpriteRenderer>()) {
+                part.color = Color.black;
+            }
+        }
     }
 
     [System.Runtime.InteropServices.DllImport("__Internal")]

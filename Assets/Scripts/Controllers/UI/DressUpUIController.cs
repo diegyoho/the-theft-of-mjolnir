@@ -24,6 +24,17 @@ public class DressUpUIController :
     Slider charmBar;
     [SerializeField]
     Slider funcionalityBar;
+
+    [Header("Chalenge")]
+    [SerializeField]
+    TextMeshProUGUI challengeCharm;
+    [SerializeField]
+    TextMeshProUGUI challengeFuncionality;
+    [SerializeField]
+    TextMeshProUGUI warningCharm;
+    [SerializeField]
+    TextMeshProUGUI warningFuncionality;
+
     
     void Start() {
         StartCoroutine(
@@ -46,6 +57,16 @@ public class DressUpUIController :
     ) {
         instance.charmBar.value = charm;
         instance.funcionalityBar.value = funcionality;
+    }
+
+    public static void UpdateChallengeAttributes(
+        float charm, float funcionality
+    ) {
+        instance.challengeCharm.text =
+        instance.warningCharm.text = $"≥{charm}";
+
+        instance.challengeFuncionality.text =
+        instance.warningFuncionality.text = $"≥{funcionality}";
     }
 
     public static void Warning(bool show = true) {

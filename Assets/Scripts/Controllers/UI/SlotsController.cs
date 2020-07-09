@@ -11,8 +11,8 @@ public class SlotsController : SingletonMonoBehaviour<SlotsController> {
 
     void Start() {
         GameData.ItemsOfType().ForEach(item => {
-            item.charmPoints = Random.Range(-9, 10);
-            item.funcionalityPoints = Random.Range(-9, 10);
+            item.charmPoints = Random.Range(-3, 4);
+            item.funcionalityPoints = Random.Range(-3, 4);
         });
         UpdateSlots(GameData.ItemsOfType());
     }

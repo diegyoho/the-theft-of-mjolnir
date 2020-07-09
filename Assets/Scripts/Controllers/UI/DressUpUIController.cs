@@ -72,4 +72,8 @@ public class DressUpUIController :
     public static void Warning(bool show = true) {
         instance.warningPopup.gameObject.SetActive(show);
     }
+
+    public void GoToDate() {
+        ChallengeController.GoToDate();
+    }
 }

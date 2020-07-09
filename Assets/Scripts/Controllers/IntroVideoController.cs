@@ -33,7 +33,7 @@ public class IntroVideoController : MonoBehaviour {
     }
 
     void EndReached(VideoPlayer vp) {
-        LoadingController.LoadScene(1);
+        LoadingController.LoadScene(2);
     }
 
     public void Skip() {

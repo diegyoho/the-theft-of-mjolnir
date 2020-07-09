@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1189997597}
+      - m_Target: {fileID: 2014691041}
         m_MethodName: GoToDate
         m_Mode: 1
         m_Arguments:
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 2.65
+  m_padding: 2.25
   m_canvasRenderer: {fileID: 607768387}
   m_TextComponent: {fileID: 1773551668}
   m_materialReferenceIndex: 1
@@ -3141,7 +3141,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1330339480}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 99
+  m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -3269,7 +3269,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 522263247}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 99
+  m_MaxValue: 10
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -4066,6 +4066,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc35aa647831824da9d4a87156af4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDate: 0
+  targetCharm: 0
+  targetFuncionality: 0
+  items: []
 --- !u!4 &1189997598
 Transform:
   m_ObjectHideFlags: 0

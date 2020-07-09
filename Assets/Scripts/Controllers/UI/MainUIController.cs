@@ -26,6 +26,6 @@ public class MainUIController :
     }
 
     public void Play() {
-        LoadingController.LoadScene(2);
+        LoadingController.LoadScene(1);
     }
 }

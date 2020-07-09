@@ -6,19 +6,56 @@ using Utilities;
 public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
 
     public int currentDate = 0;
+    public int targetCharm;
+    public int targetFuncionality;
+    int _totalScore;
+    public static int totalScore {
+        get { return instance._totalScore; }
+        set {
+            instance._totalScore = value;
+            EndUIController.UpdateTotalScore(value);
+        }
+    }
+    public static int dateScore {
+        get {
+            int charm = (int) Miscellaneous.Map(
+                ThorBaseController.charmPoints,
+                0, instance.targetCharm,
+                1, 5
+            );
+
+            int funcionality = (int) Miscellaneous.Map(
+                ThorBaseController.funcionalityPoints,
+                0, instance.targetFuncionality,
+                1, 5
+            );
+
+            return (charm + funcionality)/2;
+        }
+    }
 
     public List<ItemData> items;
 
     void Start() {
         DontDestroyOnLoad(gameObject);
+        SetupChallenge();
     }
 
-    public void GoToDate() {
-        items = ThorBaseController.GetItems();
+    public void SetupChallenge() {
+        targetCharm = Random.Range(5, 11);
+        targetFuncionality = Random.Range(5, 11);
 
-        currentDate++;
+        DressUpUIController.UpdateChallengeAttributes(
+            targetCharm, targetFuncionality
+        );
+    }
 
-        StartCoroutine(IEGoToDate());
+    public static void GoToDate() {
+        instance.items = ThorBaseController.GetItems();
+
+        instance.currentDate++;
+
+        instance.StartCoroutine(instance.IEGoToDate());
     }
 
     IEnumerator IEGoToDate() {
@@ -28,5 +65,29 @@ public class ChallengeController : SingletonMonoBehaviour<ChallengeController> {
         
         ThorBaseController.SetItems(items);
         ThorBaseController.EnableVisibility(false);
+
+        yield return new WaitForSeconds(1f);
+
+        EndUIController.Spotligh();
+
+        yield return new WaitForSeconds(1f);
+
+        EndUIController.StartHeartsAnimation();
+    }
+
+    public static void GoToRoom() {
+        instance.StartCoroutine(instance.IEGoToRoom());
+    }
+
+    IEnumerator IEGoToRoom() {
+
+        yield return new WaitForSeconds(3f);
+        
+        
+        LoadingController.LoadScene(2);
+
+        yield return new WaitUntil(() => !LoadingController.isLoading);
+        
+        SetupChallenge();
     }
 }

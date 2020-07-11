@@ -18,6 +18,8 @@ public class DressUpUIController :
     CanvasGroup clothingScreen;
     [SerializeField]
     CanvasGroup warningPopup;
+    [SerializeField]
+    CanvasGroup challengePopup;
 
     [Header("Clothing Screen")]
     [SerializeField]
@@ -40,6 +42,15 @@ public class DressUpUIController :
         StartCoroutine(
             IEChangeScreen(chestScreen)
         );
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.D)) {
+            if(challengePopup.alpha == 0)
+                ShowScreen(challengePopup);
+            else if(challengePopup.alpha == 1)
+                HideScreen(challengePopup);
+        }
     }
 
     public static void ShowClothingScreen() {
